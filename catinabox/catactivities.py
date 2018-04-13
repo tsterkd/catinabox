@@ -21,4 +21,4 @@ def cat_nap(nap_seconds):
         raise NapWillNotBeSatisfying(nap_seconds)
     time.sleep(nap_seconds)
 
-#nothing
+# nothing

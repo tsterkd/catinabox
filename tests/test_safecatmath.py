@@ -36,3 +36,14 @@ def test__cat_years_to_hooman_years__string__raises():
 def test__cat_years_to_hooman_years__nan__raises():
     with pytest.raises(safecatmath.InvalidAge):
         safecatmath.cat_years_to_hooman_years(float('nan'))
+
+
+@pytest.mark.parametrize('age', [
+    -3,
+    1100,
+    '11',
+    float('nan'),
+])
+def test__cat_years_to_hooman_years__raises(age):
+    with pytest.raises(safecatmath.InvalidAge):
+        safecatmath.cat_years_to_hooman_years(age)
